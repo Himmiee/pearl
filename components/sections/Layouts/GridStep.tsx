@@ -94,7 +94,7 @@ export const HorizontalTimeline: React.FC<HorizontalTimelineProps> = ({
   items,
 }) => {
   return (
-    <div className="w-full mx-auto px-4">
+    <div className="w-full mx-auto px-4 lg:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0">
         {items.map((item, index) => (
           <HorizontalTimelineItem

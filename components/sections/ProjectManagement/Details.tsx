@@ -38,7 +38,7 @@ export const PMReverseDetailSection = () => {
 
 export const PMTimeLineSection = () => {
   return (
-    <section className="w-full lg:px-12 ">
+    <section className="w-full  ">
       <HorizontalTimeline items={timelineItems} />
     </section>
   );

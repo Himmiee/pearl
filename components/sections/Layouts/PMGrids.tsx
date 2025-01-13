@@ -24,10 +24,10 @@ export const ContentGrid: React.FC<ContentGridProps> = ({
   return (
     <div className={`w-full h-full ${className}`}>
       <div
-        className={`flex flex-col ${contentOrder} items-center gap-8 lg:p-6 h-full`}
+        className={`flex flex-col ${contentOrder} items-center gap-12 h-full`}
       >
         {/* Image Section */}
-        <div className="w-full md:w-3/5 lg:w-1/2 p-4 lg:p-8">
+        <div className="w-full md:w-3/5 lg:w-[45%]">
           <Image
             src={image}
             alt={title}
@@ -36,7 +36,7 @@ export const ContentGrid: React.FC<ContentGridProps> = ({
         </div>
 
         {/* Content Section */}
-        <div className="w-full lg:w-1/2 space-y-4 flex flex-col md:justify-center md:items-center lg:text-center px-4">
+        <div className="w-full lg:w-1/2 space-y-4 flex flex-col md:justify-center md:items-center lg:text-center ">
           {icon && (
             <div className="bg-[#2B2F84] w-28 h-28 lg:flex justify-center items-center hidden">
               <div className="w-16 h-16 flex items-center justify-center">
@@ -49,7 +49,7 @@ export const ContentGrid: React.FC<ContentGridProps> = ({
             </div>
           )}
           <h3 className="text-xl font-bold">{title}</h3>
-          <p className="text-gray-600 max-w-[430px] lg:max-w-lg md:text-center lg:text-start">{description}</p>
+          <p className="text-gray-600 max-w-[430px] lg:max-w-[85%] md:text-center ">{description}</p>
         </div>
       </div>
     </div>

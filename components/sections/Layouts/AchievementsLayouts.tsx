@@ -7,9 +7,9 @@ import pmListImg from "@/public/images/services/png/project-management-list 1.pn
 export const AchievementLayout = () => {
   return (
     <section className="w-full  ">
-      <div className="container w-full 2xl:mx-auto">
+      <div className=" w-full ">
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:space-x-24 items-st w-full ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center  w-full ">
           {/* Purple Box */}
           <div className="bg-[#2B2F84]  text-white h-64 flex items-center justify-center space-x-4  md:space-x-36">
             <h3 className="text-xl font-medium mb-4">Experienced team</h3>

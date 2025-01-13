@@ -6,8 +6,8 @@ import capImg from "@/public/images/services/png/cap.png";
 
 export const ContactFormLayout: React.FC = () => {
   return (
-    <div className="mx-auto 2xl:container">
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1536px] mx-auto">
+    <div className="">
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[1536px]">
         {/* Left Side - Large Image */}
         <div className="col-span-1 hidden lg:block h-[980px]">
           <Image
@@ -18,7 +18,7 @@ export const ContactFormLayout: React.FC = () => {
         </div>
 
         {/* Right Side - Cap Image and Contact Form */}
-        <div className="col-span-2 flex flex-col h-full px-4 sm:px-20 lg:px-32 lg:space-y-10">
+        <div className="col-span-2 flex 2xl:px-8 flex-col  h-full px-4 sm:px-20 lg:px-32 lg:space-y-10">
           {/* Cap Image */}
           <div className="lg:flex justify-center items-center hidden">
             <Image
