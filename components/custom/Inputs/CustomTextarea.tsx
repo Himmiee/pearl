@@ -58,9 +58,12 @@ export const FormTextArea: React.FC<FormTextAreaProps> = ({
       <Textarea
         id={name}
         placeholder={placeholder}
-        className={classnames("mt-3", {})}
+        className={classnames(
+          "mt-3 border-[#484848]/30  text-sm placeholder:text-[#484848]/30",
+          {}
+        )}
         {...register(name)}
-        rows={5}
+        rows={8}
       />
     </InputContainer>
   );

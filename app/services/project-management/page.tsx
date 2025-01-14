@@ -12,10 +12,10 @@ import { ProjectManangementHeroSection } from "@/components/sections/ProjectMana
 
 const ProjectManagementPage: React.FC = () => {
   return (
-    <section className="space-y-2 md:space-y-24 ">
+    <section className="space-y-8 md:space-y-24 ">
       <ProjectManangementHeroSection />
-      <section className=" space-y-2 md:space-y-24   ">
-        <section className="space-y-2 md:space-y-24 p-4 lg:auto-container">
+      <section className=" space-y-8 md:space-y-24   ">
+        <section className="space-y-8 md:space-y-24 p-4 lg:auto-container">
           <PMDetailSection />
           <PMTimeLineSection />
           <PMReverseDetailSection />

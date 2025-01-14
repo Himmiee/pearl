@@ -26,51 +26,55 @@ export const GeneralContactForm: React.FC = () => {
   return (
     <FormProvider {...methods}>
       <section className="space-y-6">
-        <div className="text-[#303030] font-semibold text-xl">
+        <div className="text-[#303030] font-medium text-[22px] lg:text-[24px] ">
           Are you interested in a similar service? <br /> Contact us via this
           form.
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
           <CustomInput
             isFormInput={true}
             name="name"
-            label="Name"
+            label=""
             required={false}
             type="text"
-            placeholder="Enter your name"
+            placeholder="Name"
           />
           <CustomInput
             isFormInput={true}
             name="email"
-            label="Email"
+            label=""
             required={false}
             type="email"
-            placeholder="Enter your email"
+            placeholder="Email"
           />
           <CustomInput
             isFormInput={true}
             name="subject"
-            label="Subject"
+            label=""
             required={false}
             type="text"
-            placeholder="Enter the subject"
+            placeholder="Subject"
           />
           <FormTextArea
             name="message"
-            label="Message"
+            label=""
             required={false}
-            placeholder="Type your message here."
+            placeholder="Message"
           />
-          <div className="flex gap-3 items-center">
-            <Checkbox />
-            By continuing you agree to our Terms of Service and Privacy Policy.
+          <div className="space-y-8">
+            {" "}
+            <div className="flex gap-3 items-center">
+              <Checkbox />
+              By continuing you agree to our Terms of Service and Privacy
+              Policy.
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-[#2B2F84] h-[58px]  hover:bg-[#2B2F84]/90 text-white "
+            >
+              Submit
+            </Button>
           </div>
-          <Button
-            type="submit"
-            className="w-full bg-[#2B2F84] hover:bg-[#2B2F84]/90 text-white rounded-none"
-          >
-            Submit
-          </Button>
         </form>
       </section>
     </FormProvider>

@@ -38,10 +38,14 @@ export const Timeline: React.FC<TimelineProps> = ({ children }) => {
   );
 };
 
-
 interface HorizontalTimelineItemProps {
   title: string;
-  description: string;
+  description:
+    | string
+    | {
+        text: string;
+        bullets: string[];
+      };
   icon?: StaticImageData;
   isLast?: boolean;
 }
@@ -68,15 +72,26 @@ export const HorizontalTimelineItem: React.FC<HorizontalTimelineItemProps> = ({
           )}
         </div>
         {/* Horizontal Line */}
-        {/* {!isLast && ( */}
-          <div className="hidden lg:block absolute left-16 right-0 h-2 bg-white border-[1px] border-l-0 border-[#2B2F84]" />
-        {/* )} */}
+        <div className="hidden lg:block absolute left-16 right-0 h-2 bg-white border-[1px] border-l-0 border-[#2B2F84]" />
       </div>
 
       {/* Content */}
       <div className="mt-6 max-w-sm md:max-w-[430px] lg:max-w-sm md:text-center lg:text-start">
-        <h3 className="text-xl font-bold mb-3">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+        <h3 className="text-xl font-medium mb-3">{title}</h3>
+        {typeof description === "string" ? (
+          <p className="text-[#303030] font-normal leading-[1.6]">{description}</p>
+        ) : (
+          <div className="text-[#303030] font-normal">
+            <p className="mb-3 leading-[1.3]">{description.text}</p>
+            <ul className="list-disc pl-5 space-y-2">
+              {description.bullets.map((item, index) => (
+                <li key={index} className="leading-[1.6]">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -85,7 +100,12 @@ export const HorizontalTimelineItem: React.FC<HorizontalTimelineItemProps> = ({
 interface HorizontalTimelineProps {
   items: Array<{
     title: string;
-    description: string;
+    description:
+      | string
+      | {
+          text: string;
+          bullets: string[];
+        };
     icon?: StaticImageData;
   }>;
 }
@@ -94,7 +114,7 @@ export const HorizontalTimeline: React.FC<HorizontalTimelineProps> = ({
   items,
 }) => {
   return (
-    <div className="w-full mx-auto px-4 lg:px-0">
+    <div className="w-full mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0">
         {items.map((item, index) => (
           <HorizontalTimelineItem

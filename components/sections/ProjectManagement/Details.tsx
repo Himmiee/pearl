@@ -27,7 +27,7 @@ export const PMReverseDetailSection = () => {
       <ContentGrid
         image={imgTwo}
         title="Capability Statement"
-        description="We have expertly managed projects and programmes for public, commercial and private clients carrying out property development and refurbishment/ fit-out projects. Pearl Projects PM team help our client's manage their processes and also, lead on the project to ensure that all project dynamics, aspects and issues are identified, discussed and resolved."
+        description="Pearl Projects and Development's Project Management team has built up an excellent track record of delivery. Please, enquire directly for more information about how we can address your requirements and for our client references to help you in your selection process."
         icon={imgListTwo}
         reverse={true}
         className=""
@@ -38,7 +38,7 @@ export const PMReverseDetailSection = () => {
 
 export const PMTimeLineSection = () => {
   return (
-    <section className="w-full  ">
+    <section className="w-full">
       <HorizontalTimeline items={timelineItems} />
     </section>
   );

@@ -79,7 +79,7 @@ export const MethodStatementRightGrid: React.FC = () => {
             key={index}
             isLast={index === constructionSteps.length - 1}
           >
-            <h2 className="text-2xl font-semibold mb-4">{step.title}</h2>
+            <h2 className="text-2xl font-medium mb-4">{step.title}</h2>
             <p className="text-[16px] leading-relaxed text-black/60">
               {step.description}
             </p>

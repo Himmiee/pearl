@@ -24,7 +24,7 @@ export const ContentGrid: React.FC<ContentGridProps> = ({
   return (
     <div className={`w-full h-full ${className}`}>
       <div
-        className={`flex flex-col ${contentOrder} items-center gap-12 h-full`}
+        className={`flex flex-col ${contentOrder} items-center lg:gap-12 h-full`}
       >
         {/* Image Section */}
         <div className="w-full md:w-3/5 lg:w-[45%]">
@@ -48,8 +48,14 @@ export const ContentGrid: React.FC<ContentGridProps> = ({
               </div>
             </div>
           )}
-          <h3 className="text-xl font-bold">{title}</h3>
-          <p className="text-gray-600 max-w-[430px] lg:max-w-[85%] md:text-center ">{description}</p>
+          {!reverse && <h3 className="text-2xl font-medium">{title}</h3>}
+          <p
+            className={`${
+              reverse ? "lg:pt-6" : "pt-0"
+            } text-gray-600 max-w-[430px] lg:max-w-[85%] md:text-center `}
+          >
+            {description}
+          </p>
         </div>
       </div>
     </div>

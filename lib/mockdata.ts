@@ -3,6 +3,7 @@ import gridOne from "@/public/images/services/png/grid-one.png";
 import gridTwo from "@/public/images/services/png/grid-two.png";
 import gridThree from "@/public/images/services/png/grid-three.png";
 import gridFour from "@/public/images/services/png/grid-four.png";
+import { TimelineItemContent } from "./interface";
 
 export const constructionSteps = [
   {
@@ -32,17 +33,25 @@ export const constructionSteps = [
   },
 ];
 
-export const timelineItems = [
+
+export const timelineItems: TimelineItemContent[] = [
   {
     title: "Why Pearl Projects?",
     description:
-      "For Pearl Projects and Development, being a good Project Manager means strength of character with an added ability to understand the client and their brief and clearly communicate this to the team as part of the project process. Our PMs earn the client’s trust and respect of their team, ensuring each project is not just delivered but is a success.",
+      "For Pearl Projects and Development, being a good Project Manager means strength of character with an added ability to understand the client and their brief and clearly communicate this to the team as part of the project process. Our PMs earn the client's trust and respect of their team, ensuring each project is not just delivered but is a success.",
     icon: img,
   },
   {
     title: "What we Offer",
-    description:
-      "The services our PM teams provide includes : Independent professional project management of all types of building and construction ,projects ,Briefing and Feasibility Process , Move Management and Occupational space audits and Post project review and evaluation",
+    description: {
+      text: "The services our PM teams provide includes:",
+      bullets: [
+        "Independent professional project management of all types of building and construction projects",
+        "Briefing and Feasibility Process",
+        "Move Management and Occupational space audits",
+        "Post project review and evaluation",
+      ],
+    },
     icon: img,
   },
   {
