@@ -8,10 +8,10 @@ const FeaturesSection: React.FC = () => {
     <section className="w-full py-16">
       <div className=" mx-auto px-4">
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 border-collapse border border-black ">
           {/* Feature 1 */}
-          <div className="border rounded-lg p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
-            <div className=" mb-4">
+          <div className="   p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
+            <div className=" mb-5">
               <Image
                 src={LabourConsultingDark}
                 alt="Labour Consulting Icon"
@@ -23,10 +23,10 @@ const FeaturesSection: React.FC = () => {
                 className="w-8 h-8 hidden group-hover:block"
               />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-5">
               Experienced team
             </h3>
-            <p className="text-gray-700 group-hover:text-white">
+            <p className="text-gray-700 group-hover:text-white leading-8">
               Our professionals and craftsmen will always deliver on the
               assurances offered regarding the quality of their work; adhere to
               agreed time schedules and will conduct regular site visits and
@@ -38,8 +38,8 @@ const FeaturesSection: React.FC = () => {
           </div>
 
           {/* Feature 2 */}
-          <div className="border rounded-lg p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
-            <div className=" mb-4">
+          <div className="  p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
+            <div className=" mb-5">
               <Image
                 src={LabourConsultingDark}
                 alt="Labour Consulting Icon"
@@ -51,10 +51,10 @@ const FeaturesSection: React.FC = () => {
                 className="w-8 h-8 hidden group-hover:block"
               />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-5">
               Trusted by customers
             </h3>
-            <p className="text-gray-700 group-hover:text-white">
+            <p className="text-gray-700 group-hover:text-white leading-8">
               Our clients trust us because our teams work closely with the
               client, addressing concerns and ensuring the issued brief is
               achieved. Our teams have continually and consistently proven that
@@ -65,8 +65,8 @@ const FeaturesSection: React.FC = () => {
           </div>
 
           {/* Feature 3 */}
-          <div className="border rounded-lg p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
-            <div className=" mb-4">
+          <div className="  p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
+            <div className=" mb-5">
               <Image
                 src={LabourConsultingDark}
                 alt="Labour Consulting Icon"
@@ -78,10 +78,10 @@ const FeaturesSection: React.FC = () => {
                 className="w-8 h-8 hidden group-hover:block"
               />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-4">
+            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-5">
               Certified Company
             </h3>
-            <p className="text-gray-700 group-hover:text-white">
+            <p className="text-gray-700 group-hover:text-white leading-8">
               As a certified firm, we will ensure and guarantee the project
               quality; champion project adherence to building regulations and
               by-laws; offer the client competitive pricing information; and

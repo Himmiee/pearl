@@ -1,11 +1,11 @@
 import Image from "next/image";
 const Newsletter = () => {
   return (
-    <div className="bg-primary-60 py-6 px-4 sm:px-8 my-10">
+    <div className="bg-primary-60 py-10 px-4 sm:px-8 my-10">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <h3 className="text-lg font-bold text-gray-900">NEWSLETTER</h3>
-          <p className="text-sm text-gray-600">Stay Up to Date</p>
+          <p className="text-sm text-gray-600">Stay Upto Date</p>
         </div>
         <div className="relative flex items-center w-full sm:w-auto">
           <input

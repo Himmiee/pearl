@@ -4,23 +4,30 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { CustomInput } from "../../custom/Inputs/CustomInputs";
 import { FormTextArea } from "@/components/custom/Inputs/CustomTextarea";
-import { FormData } from "@/lib/types";
+import { IContactForm } from "@/lib/interface";
+import { contactFormSchema } from "@/lib/api";
+import { zodResolver } from "@hookform/resolvers/zod";
+// import { Loader } from "lucide-react";
 
-export const GeneralContactForm: React.FC = () => {
-  const methods = useForm<FormData>({
+export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
+  const methods = useForm<IContactForm>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-      agreeToTerms: false,
+      FullName: "",
+      Email: "",
+      Subject: "",
+      Message: "",
+      From: formTitle,
     },
+    mode: "onChange",
   });
 
   const { handleSubmit } = methods;
+  // const { mutate, isPending } = useUpdateContactForm();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: IContactForm) => {
     console.log("Form Submitted:", data);
+    // mutate(data);
   };
 
   return (
@@ -33,7 +40,7 @@ export const GeneralContactForm: React.FC = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
           <CustomInput
             isFormInput={true}
-            name="name"
+            name="FullName"
             label=""
             required={false}
             type="text"
@@ -41,7 +48,7 @@ export const GeneralContactForm: React.FC = () => {
           />
           <CustomInput
             isFormInput={true}
-            name="email"
+            name="Email"
             label=""
             required={false}
             type="email"
@@ -49,14 +56,14 @@ export const GeneralContactForm: React.FC = () => {
           />
           <CustomInput
             isFormInput={true}
-            name="subject"
+            name="Subject"
             label=""
             required={false}
             type="text"
             placeholder="Subject"
           />
           <FormTextArea
-            name="message"
+            name="Message"
             label=""
             required={false}
             placeholder="Message"
@@ -72,7 +79,11 @@ export const GeneralContactForm: React.FC = () => {
               type="submit"
               className="w-full bg-[#2B2F84] h-[58px]  hover:bg-[#2B2F84]/90 text-white "
             >
-              Submit
+              {/* {isPending ? (
+                <Loader className="text-lg animate-spin" />
+              ) : ( */}
+                Submit
+              {/* )} */}
             </Button>
           </div>
         </form>

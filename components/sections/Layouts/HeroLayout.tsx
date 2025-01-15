@@ -35,7 +35,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
         </div>
 
         {/* Content Container */}
-        <div className="relative h-full flex flex-col lg:flex-row items-center justify-center lg:justify-start text-white lg:w-3/4">
+        <div className="relative h-full flex flex-col-reverse gap-y-4 lg:gap-y-0 lg:flex-row items-center justify-center lg:justify-start text-white lg:w-3/4">
           {/* Social Icons */}
           {socialIcons.length > 0 && (
             <div className="flex lg:flex-col gap-6 lg:gap-12 lg:space-y-16 mb-6 lg:mb-0 lg:border-r-4 py-4 lg:pr-20">

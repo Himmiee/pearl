@@ -1,5 +1,5 @@
 import AboutDetails from "@/components/about/about-details";
-import AboutOurServices from "@/components/about/about-our-services";
+// import AboutOurServices from "@/components/about/about-our-services";
 import FeaturesSection from "@/components/about/features-section";
 import GallerySection from "@/components/about/gallery-section";
 import { HeroSection } from "@/components/about/hero-section";
@@ -12,7 +12,7 @@ export default function Home() {
       <div className="auto-container">
         <AboutDetails />
 
-        <AboutOurServices />
+        {/* <AboutOurServices /> */}
         <FeaturesSection />
       </div>
       <TrustedSuppliers />

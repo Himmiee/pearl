@@ -10,7 +10,7 @@ const GallerySection: React.FC = () => {
     <section className="w-full py-16">
       {/* Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-5xl font-bold text-primary-80 mb-5">
           GALLERY
         </h2>
         <p className="text-gray-600 mt-2 text-sm md:text-base lg:w-[40%] w-full mx-auto">

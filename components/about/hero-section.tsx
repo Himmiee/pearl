@@ -13,8 +13,8 @@ export const HeroSection: React.FC = () => {
       description="Information about our company and our philosophy"
       socialIcons={[
         { src: twitterImg, alt: "Twitter", href: "https://twitter.com" },
-        { src: instagramImg, alt: "Instagram", href: "https://instagram.com" },
         { src: facebookImg, alt: "Facebook", href: "https://facebook.com" },
+        { src: instagramImg, alt: "Instagram", href: "https://instagram.com" },
       ]}
     />
   );

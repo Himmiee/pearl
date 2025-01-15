@@ -34,8 +34,8 @@ const Services = () => {
     <section className=" my-14 ">
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
-        <div className="lg:w-1/2">
-          <h2 className="text-3xl font-bold text-gray-800">
+        <div className="lg:w-1/2 lg:px-0 px-4">
+          <h2 className="text-4xl font-semibold uppercase text-primary-80">
             Our Main Services
           </h2>
           <p className="text-gray-600 mt-8">
@@ -46,7 +46,7 @@ const Services = () => {
         </div>
         <button
           type="button"
-          className="bg-primary-100 lg:mt-0 mt-7 hover:opacity-90 transform transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[199px] h-[59px] text-white -tracking-[3%] font-bold"
+          className="bg-primary-100 lg:-mt-10 mt-7 hover:opacity-90 transform transition duration-200 uppercase hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[300px] h-[59px] text-white -tracking-[3%] font-bold"
         >
           Our Offer
         </button>
@@ -71,9 +71,11 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-75"></div>
 
             {/* Text Content */}
-            <div className="absolute bottom-4 left-4 right-4 text-white">
-              <h3 className="text-xl font-bold">{service.title}</h3>
-              <p className="text-sm mt-2">{service.description}</p>
+            <div className="absolute bottom-5 left-6 right-6 text-white">
+              <h3 className="text-xl font-bold uppercase">{service.title}</h3>
+              <p className="text-sm mt-2 font-semibold">
+                {service.description}
+              </p>
             </div>
           </div>
         ))}

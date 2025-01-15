@@ -2,5 +2,5 @@ import React from "react";
 import { ContactFormLayout } from "../Layouts/ContactLayout";
 
 export const ContactSection: React.FC = () => {
-  return <ContactFormLayout />;
+  return <ContactFormLayout formTitle="Construction" />;
 };

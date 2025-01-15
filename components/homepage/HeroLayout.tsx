@@ -48,7 +48,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
             <Image
               src={backgroundImage}
               alt={`${title} Hero Background`}
-              className="w-full h-full object-cover"
+              className="w-full h-full  object-cover"
             />
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
@@ -64,7 +64,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
           {/* Social Icons */}
           {socialIcons.length > 0 && (
             <motion.div
-              className="flex lg:flex-col gap-6 lg:gap-12 lg:space-y-16 mb-6 lg:mb-0 lg:border-r-4 lg:pr-24"
+              className="flex lg:flex-col gap-6 lg:gap-10 lg:space-y-16 mb-6 lg:mb-0 lg:border-r-4 lg:pr-24 flex-grow-0"
               variants={itemVariants}
             >
               {socialIcons.map((icon, index) => (
@@ -76,7 +76,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
                   className="hover:opacity-80 transition"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <Image src={icon.src} alt={icon.alt} />
+                  <Image src={icon.src} alt={icon.alt} height={24} width={24} />
                 </motion.a>
               ))}
             </motion.div>
@@ -84,21 +84,30 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
 
           {/* Text Content */}
           <motion.div
-            className="flex flex-col lg:flex-row items-center gap-4 lg:gap-16 text-center lg:text-left lg:pl-12 lg:space-x-16"
+            className="flex lg:flex-row flex-col items-center gap-4 lg:gap-16 text-center lg:text-left lg:pl-12"
             variants={itemVariants}
           >
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold"
+              className="text-3xl md:text-4xl lg:text-5xl leading-10 lg:leading-[5rem] font-semibold flex-grow-0"
               variants={itemVariants}
             >
-              {title}
+              {title.split("\\n").map((line, index) => (
+                <React.Fragment key={index}>
+                  <span className="block lg:inline">{line}</span>
+                  {index < title.split("\\n").length - 1 && (
+                    <br className="hidden lg:block" />
+                  )}
+                </React.Fragment>
+              ))}
             </motion.h1>
-            <motion.p
-              className="max-w-xl text-lg lg:text-xl text-white/90"
-              variants={itemVariants}
-            >
-              {description}
-            </motion.p>
+            {description && (
+              <motion.p
+                className="max-w-xl text-lg lg:text-xl text-white/90"
+                variants={itemVariants}
+              >
+                {description}
+              </motion.p>
+            )}
           </motion.div>
         </motion.div>
       </section>
