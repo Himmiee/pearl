@@ -45,7 +45,7 @@ const BannerWithOverlay = ({
           </div>
         )}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <h1 className="text-5xl font-medium md:mr-9 text-center md:text-start">{title}</h1>
+          <h1 className="text-5xl leading-[1.2] font-medium md:mr-9 text-center md:text-start uppercase">{title}</h1>
           <p className="mt-4 text-lg max-w-[427px] text-center md:text-start">
             {description}
           </p>
