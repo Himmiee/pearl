@@ -5,14 +5,16 @@ import { Button } from "@/components/ui/button";
 import { CustomInput } from "../../custom/Inputs/CustomInputs";
 import { FormTextArea } from "@/components/custom/Inputs/CustomTextarea";
 import { IContactForm } from "@/interface";
-import { contactFormSchema } from "@/lib/validationSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useUpdateContactForm } from "@/data/services.hooks";
 import { Loader } from "lucide-react";
+import { contactFormForServiceSchema } from "@/validators";
+import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
   const methods = useForm<IContactForm>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: zodResolver(contactFormForServiceSchema),
     defaultValues: {
       FullName: "",
       Email: "",
@@ -24,12 +26,22 @@ export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
   });
 
   const { handleSubmit } = methods;
-  const { mutate, isPending } = useUpdateContactForm();
+  const { mutate, isPending, isError, isSuccess, data } =
+    useUpdateContactForm();
 
   const onSubmit = (data: IContactForm) => {
     // console.log("Form Submitted:", data);
     mutate(data);
   };
+  useEffect(() => {
+    if (isError) {
+      toast.error("An error occured");
+    }
+    if (isSuccess) {
+      toast.success(`${data.message}`);
+      methods.reset();
+    }
+  }, [isError, isSuccess, methods]);
 
   return (
     <FormProvider {...methods}>

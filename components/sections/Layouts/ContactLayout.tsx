@@ -6,8 +6,8 @@ import capImg from "@/public/images/services/png/cap.png";
 
 export const ContactFormLayout = ({ formTitle }: { formTitle: string }) => {
   return (
-    <div className="pb-6 lg:pb-16 ">
-      <section className="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-0 lg:space-x-16 max-w-[1536px] ">
+    <div className="pb-6 lg:pb-16 w-full ">
+      <section className="grid grid-cols-1 lg:grid-cols-3 px-4 lg:px-0 lg:space-x-16 lg:max-w-[90%]">
         {/* Left Side - Large Image */}
         <div className="col-span-1 hidden lg:block h-full">
           <Image
@@ -29,7 +29,7 @@ export const ContactFormLayout = ({ formTitle }: { formTitle: string }) => {
           </div>
 
           {/* Contact Form */}
-          <div className="w-full lg:pb-2 flex justify-center items-center mx-auto lg:max-w-full lg:mx-0 lg:block">
+          <div className="w-full lg:pb-2  m lg:max-w-full lg:mx-0 lg:block">
             <GeneralContactForm formTitle={formTitle} />
           </div>
         </div>
