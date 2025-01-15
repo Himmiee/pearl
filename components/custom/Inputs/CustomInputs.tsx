@@ -38,7 +38,7 @@ export const CustomInput = ({
           <Input
             type={type}
             className={classnames(
-              "border-[#484848]/30 h-12 text-sm placeholder:text-[#484848]/30",
+              "border-[#484848]/30 h-12 text-sm placeholder:text-[#484848]/30 focus-visible:ring-1 ",
               {
                 "border-red-500": Boolean(errors[name]?.message), // Change the border color if there is an error
               }
