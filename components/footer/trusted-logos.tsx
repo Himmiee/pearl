@@ -17,15 +17,15 @@ const LOGOS = [
 
 export function TrustedLogos() {
   return (
-    <div className="flex flex-wrap lg:gap-8 gap-4 justify-center lg:justify-start">
+    <div className="flex flex-row  lg:gap-3 gap-4 justify-center lg:justify-start">
       {LOGOS.map(({ src, alt }) => (
         <Image
           key={alt}
           src={src}
           alt={alt}
-          width={100}
-          height={80}
-          className="object-contain"
+          width={120}
+          height={40}
+          className=" object-contain"
         />
       ))}
     </div>

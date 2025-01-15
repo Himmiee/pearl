@@ -79,8 +79,11 @@ body {
     /* font-family: "Urbanist", sans-serif; */
   }
 
-  .auto-container {
+  /* .auto-container {
     @apply w-11/12 2xl:max-w-[1440px] mx-auto;
+  } */
+  .auto-container {
+    @apply w-full sm:w-11/12 md:w-10/12 lg:max-w-[1280px] xl:max-w-[1440px] mx-auto;
   }
 }
 

@@ -13,87 +13,89 @@ const TrustedSuppliers: React.FC = () => {
   return (
     <>
       {/* Header */}
-      <div className="auto-container mb-8 mt-16 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+      <div className=" mb-8 mt-16 ">
+        <h2 className="auto-container text-3xl md:text-5xl font-semibold text-gray-800">
           TRUSTED SUPPLIERS
         </h2>
       </div>
-      <section className="w-full lg:py-16 py-8 lg:mb-16 mb-8 auto-container">
-        {/* Suppliers Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:gap-4 gap-10  mx-auto lg:px-4 px-10">
-          {/* Supplier 1 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={ratedPeopleLogo}
-              alt="Rated People Logo"
-              className="w-auto h-16 object-contain"
-            />
-          </div>
+      <div className=" bg-[#2B2F841A] ">
+        <section className="w-full lg:py-32 py-8 lg:mb-16 mb-8 auto-container">
+          {/* Suppliers Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:gap-x-10 lg:gap-y-10 gap-10  mx-auto lg:px-4 px-10">
+            {/* Supplier 1 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={ratedPeopleLogo}
+                alt="Rated People Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
 
-          {/* Supplier 2 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={masterBuildersLogo}
-              alt="Federation of Master Builders Logo"
-              className="w-auto h-24 object-contain"
-            />
-          </div>
+            {/* Supplier 2 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={masterBuildersLogo}
+                alt="Federation of Master Builders Logo"
+                className="w-auto h-24 object-contain"
+              />
+            </div>
 
-          {/* Supplier 3 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={toppsTilesLogo}
-              alt="Topps Tiles Logo"
-              className="w-auto h-16 object-contain"
-            />
-          </div>
+            {/* Supplier 3 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={toppsTilesLogo}
+                alt="Topps Tiles Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
 
-          {/* Supplier 4 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={ironmongeryLogo}
-              alt="Ironmongery Direct Logo"
-              className="w-auto h-16 object-contain"
-            />
-          </div>
+            {/* Supplier 4 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={ironmongeryLogo}
+                alt="Ironmongery Direct Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
 
-          {/* Supplier 5 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={screwfixLogo}
-              alt="Screwfix Logo"
-              className="w-auto h-16 object-contain"
-            />
-          </div>
+            {/* Supplier 5 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={screwfixLogo}
+                alt="Screwfix Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
 
-          {/* Supplier 6 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={duluxLogo}
-              alt="Dulux Logo"
-              className="w-auto h-16 object-contain"
-            />
-          </div>
+            {/* Supplier 6 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={duluxLogo}
+                alt="Dulux Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
 
-          {/* Supplier 7 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={trustatraderLogo}
-              alt="Trust A Trader Logo"
-              className="w-auto h-16 object-contain"
-            />
-          </div>
+            {/* Supplier 7 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={trustatraderLogo}
+                alt="Trust A Trader Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
 
-          {/* Supplier 8 */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={howdensLogo}
-              alt="Howdens Logo"
-              className="w-auto h-16 object-contain"
-            />
+            {/* Supplier 8 */}
+            <div className="flex justify-center items-center">
+              <Image
+                src={howdensLogo}
+                alt="Howdens Logo"
+                className="w-auto h-16 object-contain"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };

@@ -150,7 +150,7 @@ const Navbar = () => {
                     {link.subLinks && (
                       <span
                         className={`ml-2 transition-transform duration-300 ${
-                          openDropdown === link.slug ? "rotate-180" : ""
+                          openDropdown === link.slug ? "" : "rotate-180"
                         }`}
                       >
                         <ChevronUp className="w-5 h-5" />
@@ -244,7 +244,7 @@ const Navbar = () => {
                         {link.subLinks && (
                           <span
                             className={`ml-2 transition-transform duration-300 ${
-                              openDropdown === link.slug ? "rotate-180" : ""
+                              openDropdown === link.slug ? "" : "rotate-180"
                             }`}
                           >
                             <ChevronUp className="w-5 h-5" />
