@@ -3,6 +3,7 @@ import { Barlow } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import ReactQueryProvider from "@/lib/QueryProvider";
 
 const barlow = Barlow({
   subsets: ["latin"], // Choose the appropriate subsets, e.g., "latin"
@@ -20,11 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={barlow.className}>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <ReactQueryProvider>
+        <body className={barlow.className}>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </ReactQueryProvider>
     </html>
   );
 }

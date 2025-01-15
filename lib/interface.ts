@@ -18,3 +18,13 @@ export interface TimelineItemContent {
       };
   icon?: StaticImageData;
 }
+
+export interface IContactForm {
+  FullName: string;
+  Email: string;
+  Phone?: string;
+  Subject?: string;
+  Message: string;
+  Asset?: string;
+  From: string;
+}
