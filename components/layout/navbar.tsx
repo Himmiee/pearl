@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp } from "lucide-react";
+
 interface NavLink {
   name: string;
   url: string;
@@ -93,13 +94,11 @@ const Navbar = () => {
       //   scrolled ? "fixed transition ease-in" : ""
       // } left-0 right-0 z-30 w-full`}
       className={`${
-        scrolled
-          ? "fixed top-0 left-0 right-0 bg-white shadow-md transition ease-in z-30"
-          : ""
-      } w-full`}
+        scrolled ? "fixed transition ease-in bg-white shadow-md" : ""
+      } left-0 right-0 z-[3000] w-full`}
     >
       <main className="w-full relative h-full">
-        <div className="w-full flex flex-row items-center justify-between bg-white xl:px-32 lg:px-10 px-4  h-20">
+        <div className="w-full flex flex-row items-center  justify-around bg-white xl:px-32 lg:px-10 px-4  h-20">
           <Link href="/">
             <Image
               src="/logos/Pearl_logo.png"
@@ -115,7 +114,7 @@ const Navbar = () => {
               scrolled
                 ? "justify-end xl:justify-end transition ease-in"
                 : "justify-end xl:justify-center"
-            } flex items-center xl:w-[80%]`}
+            } flex items-center xl:w-[65%]`}
           >
             {/* DESKTOP MENU */}
             <ul
@@ -159,7 +158,7 @@ const Navbar = () => {
                   </div>
 
                   {link.subLinks && openDropdown === link.slug && (
-                    <div className="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px] z-50">
+                    <div className="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px] z-[5000]">
                       {link.subLinks.map((subLink, subId) => (
                         <Link
                           key={subId}
@@ -179,7 +178,7 @@ const Navbar = () => {
                 <Link href="/contact">
                   <button
                     type="button"
-                    className="bg-primary-100 hover:opacity-90 hover:scale-75 transform transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[199px] h-[59px] text-white -tracking-[3%] font-bold"
+                    className="bg-primary-100 hover:opacity-90 hover:scale-75 transform transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[150px] h-[50px] text-white -tracking-[3%] font-bold"
                   >
                     CONTACT
                   </button>
@@ -195,7 +194,7 @@ const Navbar = () => {
                   animate="open"
                   exit="closed"
                   variants={menuVariants}
-                  className="fixed top-0 right-0 bottom-0 bg-white z-50 lg:w-[40%] sm:w-3/4 w-11/12 flex flex-col py-8 sm:px-10 px-8 overflow-y-auto cursor-pointer"
+                  className="fixed top-0 right-0 bottom-0 bg-white z-[5000] lg:w-[40%] sm:w-3/4 w-11/12 flex flex-col py-8 sm:px-10 px-8 overflow-y-auto cursor-pointer"
                 >
                   <span
                     className="flex justify-end xl:hidden"
@@ -312,7 +311,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-40 bg-black/80"
+              className="fixed inset-0 z-[4000] bg-black/80"
               onClick={() => setOpenMenu(false)}
             />
           )}

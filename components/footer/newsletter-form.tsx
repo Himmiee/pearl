@@ -7,11 +7,11 @@ const Newsletter = () => {
           <h3 className="text-lg font-bold text-gray-900">NEWSLETTER</h3>
           <p className="text-sm text-gray-600">Stay Upto Date</p>
         </div>
-        <div className="relative flex items-center w-full sm:w-auto">
+        <div className="relative flex items-center w-full max-w-[794px]">
           <input
             type="email"
             placeholder="Your Email..."
-            className="w-full sm:w-[796px] py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
+            className="w-full py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
           />
           <button
             type="submit"

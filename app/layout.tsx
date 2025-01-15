@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import Providers from "@/providers";
+import { Toaster } from "react-hot-toast";
+
 
 const barlow = Barlow({
   subsets: ["latin"], // Choose the appropriate subsets, e.g., "latin"
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
   title: "Pearl Website",
   description: "Official Website of Pearl Projects",
 };
+
 
 export default function RootLayout({
   children,
@@ -26,6 +29,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster />
         </Providers>
       </body>
     </html>

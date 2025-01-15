@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
-import { Axiosinstance } from "."
+import { Axiosinstance } from ".";
 
 
 export const useFetchTestimonials = () => {
