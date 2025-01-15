@@ -22,7 +22,7 @@ export const GeneralContactForm: React.FC = () => {
   const { handleSubmit } = methods;
 
   const onSubmit = (data: FormData) => {
-    console.log("Form Submitted:", data);
+    // console.log("Form Submitted:", data);
   };
 
   return (
