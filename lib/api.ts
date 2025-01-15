@@ -45,6 +45,3 @@ export const contactFormSchema = z.object({
     .max(500, "Message is too long"),
   From: z.string().optional(), // Optional field
 });
-
-// Infer the TypeScript type from the Zod schema (optional)
-type ContactFormSchema = z.infer<typeof contactFormSchema>;
