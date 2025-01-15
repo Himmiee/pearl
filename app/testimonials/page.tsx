@@ -1,7 +1,7 @@
 import BannerWithOverlay from "@/components/custom/banner-with-overlay";
 import TestimonialAccordion from "@/components/modules/testimonial/testimonial-accordion";
 import React from "react";
-import  TestimonialBackdropImage from "@/public/images/testimonial-overlay.jpeg";
+import TestimonialBackdropImage from "@/public/images/testimonials.jpeg";
 
 const TestimonialPages = () => {
   return (
