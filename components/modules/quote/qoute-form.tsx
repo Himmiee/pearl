@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,7 +24,7 @@ import {
 } from "@/components/ui/select";
 import { Countries, ProjectType } from "@/data";
 import { Calendar } from "@/components/ui/calendar";
-import { CalendarIcon, ChevronsUpDown, Check } from "lucide-react";
+import { CalendarIcon} from "lucide-react";
 import {
   Popover,
   PopoverContent,

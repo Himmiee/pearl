@@ -15,8 +15,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronsUpDown, Check, ChevronDown } from "lucide-react";
+import {  Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface CountrySelectProps {
@@ -51,7 +50,7 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
           <CommandList>
             <CommandEmpty>No Country found.</CommandEmpty>
             <CommandGroup>
-              {countries.map((country, index) => (
+              {countries.map((country) => (
                 <CommandItem
                   key={country}
                   value={country}
