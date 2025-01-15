@@ -1,24 +1,35 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // pages/projects.tsx
 
+"use client";
+
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useFetchProjects } from "@/data/projects.hooks";
+// const projects = [
+//   {
+//     title: "Farringdon",
+//     tag1: "Complete Refurbishment ",
+//     tag2: "Interior Design",
 
-const projects = [
-  {
-    title: "Farringdon",
-    tag1: "Complete Refurbishment ",
-    tag2: "Interior Design",
-
-    image: "/images/homepage/project-1.jpg", // Replace with your image path
-  },
-  {
-    title: "Finsbury Park",
-    tag1: "Garage Conversion ",
-    tag2: "Interior Design",
-    image: "/images/homepage/project-2.jpg", // Replace with your image path
-  },
-];
+//     image: "/images/homepage/project-1.jpg", // Replace with your image path
+//   },
+//   {
+//     title: "Finsbury Park",
+//     tag1: "Garage Conversion ",
+//     tag2: "Interior Design",
+//     image: "/images/homepage/project-2.jpg", // Replace with your image path
+//   },
+// ];
 
 const Projects = () => {
+  const { data, isLoading } = useFetchProjects();
+  const projects = data?.data;
+
+  if (isLoading) {
+    return <Skeleton className="w-full  h-60 my-10" />;
+  }
+  console.log(projects);
   return (
     <section className=" my-24">
       {/* Header Section */}
@@ -45,15 +56,15 @@ const Projects = () => {
 
       {/* Projects Cards */}
       <div className="space-y-8">
-        {projects.map((project, index) => (
+        {projects.map((project: any) => (
           <div
-            key={index}
+            key={project._id}
             className="relative h-96  overflow-hidden shadow-lg group"
           >
             {/* Background Image */}
             <Image
-              src={project.image}
-              alt={project.title}
+              src={project.first_image.image}
+              alt={project.project_name}
               fill
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
@@ -65,7 +76,7 @@ const Projects = () => {
             <div className="absolute inset-0 flex lg:flex-row flex-col items-center lg:justify-between justify-center px-6">
               {/* Left: Title */}
               <div className=" bg-white/60  flex  lg:w-[50%] w-full mb-5 lg:mb-0  h-16 items-center justify-between px-5 py-3">
-                <div className=" text-xl font-bold">{project.title}</div>
+                <div className=" text-xl font-bold">{project.project_name}</div>
 
                 <div className="text-xl">
                   <span className="flex items-center justify-center w-10 h-10 ">
@@ -75,8 +86,8 @@ const Projects = () => {
               </div>
 
               {/* Right: Description */}
-              <div className="text-white lg:text-xl text-lg flex space-x-9 lg:pl-20 lg:w-[50%] w-full">
-                <p className="font-bold">{project.tag1}</p>
+              <div className="text-white lg:text-xl text-lg flex  lg:pl-20 space-x-10 lg:w-[50%] w-full">
+                <p className="font-bold">{project.service_tag}</p>
                 <p className="font-bold">{project.tag2}</p>
               </div>
             </div>

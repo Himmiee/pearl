@@ -1,6 +1,6 @@
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
-import { FormTextAreaProps } from "@/lib/interface";
+import { FormTextAreaProps } from "@/interface";
 import { useFormContext } from "react-hook-form";
 import { InputContainer } from "./InputContainer";
 import { Label } from "@/components/ui/label";
@@ -70,4 +70,3 @@ export const FormTextArea: React.FC<FormTextAreaProps> = ({
     </InputContainer>
   );
 };
- 

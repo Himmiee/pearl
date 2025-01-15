@@ -1,5 +1,6 @@
 import { Label } from "@/components/ui/label";
-import { InputContainerProps } from "@/lib/types";
+import { InputContainerProps } from "@/types";
+
 
 export const InputContainer = ({
   label,

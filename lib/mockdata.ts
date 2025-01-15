@@ -3,7 +3,7 @@ import gridOne from "@/public/images/services/png/grid-one.png";
 import gridTwo from "@/public/images/services/png/grid-two.png";
 import gridThree from "@/public/images/services/png/grid-three.png";
 import gridFour from "@/public/images/services/png/grid-four.png";
-import { TimelineItemContent } from "./interface";
+import { TimelineItemContent } from "@/interface";
 
 export const constructionSteps = [
   {
@@ -32,7 +32,6 @@ export const constructionSteps = [
       "Pearl Projects is committed to operating a project site that is safe and without risk to health, safety and welfare to all those involved in the project and for third parties as well. We are also committed to preventing accidents and ill health for our staff, client, (sub)-contractors, third parties and members of the public.",
   },
 ];
-
 
 export const timelineItems: TimelineItemContent[] = [
   {
