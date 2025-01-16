@@ -4,7 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 // import { CustomInput } from "../../custom/Inputs/CustomInputs";
 import { FormTextArea } from "@/components/custom/Inputs/CustomTextarea";
-import { FormData } from "@/lib/types";
+import { FormData } from "@/types";
 import { CustomInput } from "@/components/custom/Inputs/CustomInputs";
 // import { CustomInput } from "../custom/Inputs/CustomInputs";
 

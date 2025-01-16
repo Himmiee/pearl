@@ -8,6 +8,7 @@ export interface FormTextAreaProps {
   maxWords?: number;
 }
 
+
 export interface TimelineItemContent {
   title: string;
   description:
@@ -17,4 +18,14 @@ export interface TimelineItemContent {
         bullets: string[];
       };
   icon?: StaticImageData;
+}
+
+export interface IContactForm {
+  FullName: string;
+  Email: string;
+  Phone?: string;
+  Subject?: string;
+  Message: string;
+  Asset?: string;
+  From: string;
 }

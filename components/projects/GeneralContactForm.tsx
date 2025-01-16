@@ -4,8 +4,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 // import { CustomInput } from "../../custom/Inputs/CustomInputs";
 import { FormTextArea } from "@/components/custom/Inputs/CustomTextarea";
-import { FormData } from "@/lib/types";
 import { CustomInput } from "../custom/Inputs/CustomInputs";
+import { FormData } from "@/types";
 
 export const GeneralContactForm: React.FC = () => {
   const methods = useForm<FormData>({
