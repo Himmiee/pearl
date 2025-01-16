@@ -27,3 +27,14 @@ export const useCreateServices = () => {
     },
   });
 };
+
+//contact form
+export const useUpdateContactForm = () => {
+  return useMutation({
+    mutationFn: async (service: any) => {
+      const response = await Axiosinstance.post("/contact-forms", service);
+      return response.data;
+    },
+    onSuccess: () => {},
+  });
+};

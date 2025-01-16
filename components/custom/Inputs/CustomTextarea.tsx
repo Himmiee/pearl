@@ -1,6 +1,6 @@
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
-import { FormTextAreaProps } from "@/lib/interface";
+import { FormTextAreaProps } from "@/interface";
 import { useFormContext } from "react-hook-form";
 import { InputContainer } from "./InputContainer";
 import { Label } from "@/components/ui/label";
@@ -60,7 +60,9 @@ export const FormTextArea: React.FC<FormTextAreaProps> = ({
         placeholder={placeholder}
         className={classnames(
           "mt-3 border-[#484848]/30  text-sm placeholder:text-[#484848]/30",
-          {}
+          {
+            "border-red-500": Boolean(errors[name]?.message), // Change the border color if there is an error
+          }
         )}
         {...register(name)}
         rows={8}
