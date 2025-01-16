@@ -115,7 +115,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
       {/* Optional Buttons */}
       {buttons && (
         <motion.div
-          className="absolute bottom-10 lg:right-20 right-0 w-full flex justify-center"
+          className="absolute bottom-10  items-center w-full flex justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
