@@ -14,7 +14,7 @@ export const CustomGrid = ({
   return (
     <div
       className={`group grid lg:grid-cols-[45%_55%] gap-8 border border-gray-200 overflow-hidden transition-all duration-300 hover:bg-[#2a2f8d] ${
-        reverse ? "lg:grid-cols-[55%_45%] lg:[&>*:first-child]:order-2" : ""
+        reverse ? "lg:grid-cols-[55%_43%] lg:[&>*:first-child]:order-2" : ""
       }`}
     >
       {/* Text Content */}
@@ -25,7 +25,7 @@ export const CustomGrid = ({
         <div className="lg:hidden">
           <Image src={imageSrc} alt={title} className="object-cover" />
         </div>
-        <p className="text-[#303030] text-base font-normal max-w-lg group-hover:text-white leading-[1.8]">
+        <p className="text-[#303030] text-base font-normal max-w-xl group-hover:text-white leading-[1.8]">
           {description}
         </p>
       </div>

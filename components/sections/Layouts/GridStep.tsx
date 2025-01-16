@@ -23,7 +23,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       </div>
 
       {/* Content */}
-      <div className="flex-1 pb-8 lg:pb-20 lg:px-12">{children}</div>
+      <div className="flex-1 pb-8 lg:pb-20 lg:px-6">{children}</div>
     </div>
   );
 };

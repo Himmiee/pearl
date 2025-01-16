@@ -1,9 +1,7 @@
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // pages/projects.tsx
 
 "use client";
-
 
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -15,8 +13,6 @@ import { usePathname } from "next/navigation";
 //     title: "Farringdon",
 //     tag1: "Complete Refurbishment ",
 //     tag2: "Interior Design",
-
-
 
 //     image: "/images/homepage/project-1.jpg", // Replace with your image path
 //   },
@@ -34,16 +30,18 @@ const Projects = () => {
 
   const pathname = usePathname();
 
-
   if (isLoading) {
-    return <Skeleton className="w-full  h-60 my-10" />;
+    return (
+      <div className="lg:px-[6.5rem]">
+        <Skeleton className="w-full  h-[18rem] my-10 " />;
+      </div>
+    );
   }
   console.log(projects);
 
   return (
-    <section className=" my-24">
+    <section className=" my-10 lg:px-[6.5rem]">
       {/* Header Section */}
-
 
       {pathname !== "/projects" && (
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
@@ -61,7 +59,7 @@ const Projects = () => {
           <Link href={"/projects"}>
             <button
               type="button"
-              className="bg-primary-100 lg:-mt-20 mt-7 hover:opacity-90 transform transition duration-200 uppercase hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[300px] h-[59px] text-white -tracking-[3%] font-bold"
+              className="bg-primary-100 lg:-mt-20 mt-7 hover:opacity-90 transform transition duration-200 uppercase hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[150px] h-[50px] text-white -tracking-[3%] font-bold"
             >
               All Projects
             </button>
@@ -71,19 +69,15 @@ const Projects = () => {
 
       {/* Projects Cards */}
       <div className="space-y-8">
-        {projects.map((project: any) => (
+        {projects?.map((project: any) => (
           <div
             key={project._id}
-
             className="relative h-96  overflow-hidden shadow-lg group"
           >
             {/* Background Image */}
             <Image
-
-
               src={project.first_image.image}
               alt={project.project_name}
-
               fill
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
@@ -95,21 +89,17 @@ const Projects = () => {
             <div className="absolute inset-0 flex lg:flex-row flex-col items-center lg:justify-between justify-center px-6">
               {/* Left: Title */}
 
-
               <Link
                 href={`/projects/${project._id}`}
                 className=" bg-white/60  flex  lg:w-[50%] w-full mb-5 lg:mb-0  h-16 items-center justify-between px-5 py-3"
               >
                 <div className=" text-xl font-bold">{project.project_name}</div>
 
-
-
                 <div className="text-xl">
                   <span className="flex items-center justify-center w-10 h-10 ">
                     →
                   </span>
                 </div>
-
               </Link>
 
               {/* Right: Description */}

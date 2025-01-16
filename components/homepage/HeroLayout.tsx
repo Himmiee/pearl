@@ -56,7 +56,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
 
         {/* Content Container */}
         <motion.div
-          className="relative h-full flex flex-col lg:flex-row items-center justify-center lg:justify-start text-white lg:space-x-24 lg:w-3/4"
+          className="relative h-full flex flex-col lg:flex-row items-center justify-center lg:justify-start text-white lg:space-x-24 lg:w-[60%]"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -115,7 +115,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
       {/* Optional Buttons */}
       {buttons && (
         <motion.div
-          className="absolute bottom-10 lg:right-40 right-0 w-full flex justify-center"
+          className="absolute bottom-10 lg:right-20 right-0 w-full flex justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}

@@ -7,7 +7,7 @@ import galleryImg4 from "@/public/images/about/gallery-4.jpg";
 
 const GallerySection: React.FC = () => {
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-16 lg:px-[6.5rem]">
       {/* Header */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-3xl md:text-5xl font-bold text-primary-80 mb-5">
@@ -20,7 +20,7 @@ const GallerySection: React.FC = () => {
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6  mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6  mx-auto ">
         {/* Image 1 */}
         <div className="relative h-64 md:h-80 group">
           <div className="absolute inset-0 border-4 border-transparent group-hover:border-[#D0802B] transition-all duration-300"></div>

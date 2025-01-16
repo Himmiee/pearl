@@ -12,7 +12,7 @@ const AboutOurServices: React.FC = () => {
       title: "About", // For sidebar
       contentTitle: "ABOUT OUR SERVICES", // For content title
       content: (
-        <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+        <p className="text-gray-600 leading-relaxed ">
           With several years of experience across our management team, Pearl
           Projects and Development offers and provides exceptional, personalised
           and professional services to its client. We place a premium on the
@@ -48,7 +48,7 @@ const AboutOurServices: React.FC = () => {
       title: "Our Vision",
       contentTitle: "OUR VISION",
       content: (
-        <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+        <p className="text-gray-600 leading-relaxed ">
           Delivering projects that exceed client expectations and are
           incident-free.
         </p>
@@ -59,7 +59,7 @@ const AboutOurServices: React.FC = () => {
       title: "Our Mission",
       contentTitle: "OUR MISSION",
       content: (
-        <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+        <p className="text-gray-600 leading-relaxed ">
           Ensure each project undertaken is within budget and on time, embodies
           quality delivery and the client is offered our service at a fair and
           competitive price.
@@ -71,7 +71,7 @@ const AboutOurServices: React.FC = () => {
       title: "Our Values",
       contentTitle: "OUR VALUES",
       content: (
-        <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+        <p className="text-gray-600 leading-relaxed ">
           We are committed to delivering a robust service and offer the
           assurance of integrity and professionalism in all we do. To our
           clients, suppliers, professional colleagues and sub-contractors, we
@@ -84,7 +84,7 @@ const AboutOurServices: React.FC = () => {
       title: "Membership",
       contentTitle: "MEMBERSHIP",
       content: (
-        <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+        <p className="text-gray-600 leading-relaxed ">
           Pearl Projects & Development is an accredited member of the Federation
           of Master Builders, whilst members of our management team are members
           of the Chartered Institute of Builders (CIOB) and Association for
@@ -99,15 +99,15 @@ const AboutOurServices: React.FC = () => {
   };
 
   return (
-    <section className="w-full min-h-[60vh] flex flex-col md:flex-row my-10">
+    <section className="w-full min-h-[60vh] flex flex-col md:flex-row my-10 px-[6.5rem]">
       {/* Left Sidebar */}
       <div className="w-full md:w-1/4 md:sticky top-0 bg-white">
         <nav className="space-y-4 px-6 py-8">
-          <ul className="space-y-3">
+          <ul className="space-y-5">
             {sections.map((section) => (
               <li
                 key={section.id}
-                className={`flex items-center space-x-2 cursor-pointer text-lg sm:text-xl ${
+                className={`flex items-center space-x-3 cursor-pointer text-lg sm:text-xl ${
                   activeSection === section.id
                     ? "text-primary-100 font-semibold"
                     : "text-gray-600"
@@ -115,7 +115,7 @@ const AboutOurServices: React.FC = () => {
                 onClick={() => handleClick(section.id)}
               >
                 <span
-                  className={`h-6 w-1 ${
+                  className={`h-8 w-0.5 ${
                     activeSection === section.id
                       ? "bg-primary-100"
                       : "bg-transparent"
@@ -145,7 +145,9 @@ const AboutOurServices: React.FC = () => {
                 <h2 className="text-2xl sm:text-5xl uppercase font-bold text-[#4D5886]">
                   {section.contentTitle}
                 </h2>
-                {section.content}
+                <p className=" text-gray-600 leading-relaxed">
+                  {section.content}
+                </p>
               </motion.div>
             ))}
         </AnimatePresence>

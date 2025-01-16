@@ -5,13 +5,13 @@ import Image from "next/image";
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="w-full py-16">
-      <div className=" mx-auto px-4">
+    <section className="w-full py-16 lg:px-[6.5rem]">
+      <div className="mx-auto">
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 border-collapse border border-black ">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border border-gray-300">
           {/* Feature 1 */}
-          <div className="   p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
-            <div className=" mb-5">
+          <div className="p-6 bg-white hover:bg-primary-100 transition duration-300 group">
+            <div className="mb-5">
               <Image
                 src={LabourConsultingDark}
                 alt="Labour Consulting Icon"
@@ -38,8 +38,8 @@ const FeaturesSection: React.FC = () => {
           </div>
 
           {/* Feature 2 */}
-          <div className="  p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
-            <div className=" mb-5">
+          <div className="p-6 bg-white hover:bg-primary-100 transition duration-300 group">
+            <div className="mb-5">
               <Image
                 src={LabourConsultingDark}
                 alt="Labour Consulting Icon"
@@ -65,8 +65,8 @@ const FeaturesSection: React.FC = () => {
           </div>
 
           {/* Feature 3 */}
-          <div className="  p-6  md:text-left bg-white hover:bg-primary-100 transition duration-300 group">
-            <div className=" mb-5">
+          <div className="p-6 bg-white hover:bg-primary-100 transition duration-300 group">
+            <div className="mb-5">
               <Image
                 src={LabourConsultingDark}
                 alt="Labour Consulting Icon"

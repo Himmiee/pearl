@@ -59,10 +59,10 @@ export const MethodStatementGrid: React.FC = () => {
         </div>
       </section>
       <section className="flex space-x-6">
-        <Button className="shadow-none w-[244px] h-[48px] bg-[#2B2F84] text-white rounded-none hover:bg-[#2B2F84]/80 font-medium">
+        <Button className="shadow-none w-[150px] h-[50px] bg-[#2B2F84] text-white rounded-none hover:bg-[#2B2F84]/80 font-medium">
           Our Offer
         </Button>
-        <Button className="shadow-none  w-[244px] h-[48px] border text-[#303030] bg-white rounded-none hover:bg-gray-50 font-medium">
+        <Button className="shadow-none  w-[150px] h-[50px] border text-[#303030] bg-white rounded-none hover:bg-gray-50 font-medium">
           Our Offer
         </Button>
       </section>

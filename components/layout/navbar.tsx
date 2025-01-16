@@ -98,7 +98,7 @@ const Navbar = () => {
       } left-0 right-0 z-[3000] w-full`}
     >
       <main className="w-full relative h-full">
-        <div className="w-full flex flex-row items-center  justify-around bg-white xl:px-32 lg:px-10 px-4  h-20">
+        <div className="w-full flex flex-row items-center  lg:justify-center justify-between space-x-32 bg-white xl:px-32 lg:px-10 px-4  h-20">
           <Link href="/">
             <Image
               src="/logos/Pearl_logo.png"
@@ -114,7 +114,7 @@ const Navbar = () => {
               scrolled
                 ? "justify-end xl:justify-end transition ease-in"
                 : "justify-end xl:justify-center"
-            } flex items-center xl:w-[65%]`}
+            } flex items-center xl:w-[70%]`}
           >
             {/* DESKTOP MENU */}
             <ul
@@ -174,11 +174,11 @@ const Navbar = () => {
               ))}
 
               {/* CONTACT BUTTON */}
-              <div className="justify-end hidden w-[35%] xl:flex">
+              <div className="justify-end   hidden lg:w-[30%] xl:flex">
                 <Link href="/contact">
                   <button
                     type="button"
-                    className="bg-primary-100 hover:opacity-90 hover:scale-75 transform transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[150px] h-[50px] text-white -tracking-[3%] font-bold"
+                    className="bg-primary-100 hover:opacity-90  transform transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[150px] h-[50px] text-white -tracking-[3%] font-bold"
                   >
                     CONTACT
                   </button>
