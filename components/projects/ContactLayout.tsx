@@ -9,7 +9,7 @@ import { GeneralContactForm } from "./GeneralContactForm";
 
 export const ContactFormLayout: React.FC = () => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 gap-6  ">
+    <section className="grid grid-cols-1 lg:grid-cols-3 gap-6  lg:pr-[4.1rem] ">
       {/* Left Side - Large Image */}
       <div className="col-span-1 hidden lg:block h-[980px] ">
         <Image

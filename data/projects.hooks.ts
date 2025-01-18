@@ -67,3 +67,30 @@ export const useDeleteProject = () => {
     },
   });
 };
+
+// Submit Project Form Hook
+export const useSubmitProjectForm = () => {
+
+  return useMutation({
+    mutationFn: async (data: { name: string; email: string; message: string; subject:string }) => {
+      const datatosubmit = {
+        FullName: data.name,
+        Email: data.email,
+        Subject: data.subject, 
+        Message: data.message,
+        From: "PROJECTS",
+      };
+      console.log("Data to submit:", datatosubmit);
+
+      const response = await Axiosinstance.post("/contact-forms", datatosubmit);
+      return response.data;
+    },
+    onSuccess: (data) => {
+      console.log("Form submitted successfully:", data);
+      // Optionally invalidate related queries or update the cache if needed
+    },
+    onError: (error: any) => {
+      console.error("Error submitting form:", error.response?.data || error.message);
+    },
+  });
+};
