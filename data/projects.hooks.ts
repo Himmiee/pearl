@@ -112,3 +112,23 @@ export const useSubmitProjectForm = () => {
     },
   });
 };
+// Subscribe to Newsletter Hook
+export const useSubscribeNewsletter = () => {
+  return useMutation({
+    mutationFn: async (email: string) => {
+      const response = await Axiosinstance.post("/newsletter", { email });
+      return response.data;
+    },
+    onSuccess: (data) => {
+      console.log("Newsletter subscription successful:", data);
+      // Add any success message or behavior here
+    },
+    onError: (error: any) => {
+      console.error(
+        "Error subscribing to newsletter:",
+        error.response?.data || error.message
+      );
+      // Add any error handling or message here
+    },
+  });
+};
