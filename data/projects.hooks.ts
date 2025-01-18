@@ -1,18 +1,36 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import { Axiosinstance } from ".";
-
+import { usePathname } from "next/navigation";
+import useCountryStore from "@/lib/store/useCountryStore";
+// import useCountryStore from "@/stores/countryStore";
 // Fetch All Projects
+// export const useFetchProjects = () => {
+//   return useQuery({
+//     queryKey: ["projects"], // Query key for all projects
+//     queryFn: async () => {
+//       const response = await Axiosinstance.get("/projects");
+//       return response.data;
+//     },
+//   });
+// };
 export const useFetchProjects = () => {
+  const pathname = usePathname();
+  const { selectedCountry } = useCountryStore();
+
   return useQuery({
-    queryKey: ["projects"], // Query key for all projects
+    queryKey: ["projects", pathname === "/pearl-abroad" ? selectedCountry : null],
     queryFn: async () => {
-      const response = await Axiosinstance.get("/projects");
+      const url =
+        pathname === "/pearl-abroad"
+          ? `/projects/?location=${selectedCountry}`
+          : "/projects";
+
+      const response = await Axiosinstance.get(url);
       return response.data;
     },
   });
 };
-
 // Fetch One Project
 export const useFetchProject = (id: string) => {
   return useQuery({

@@ -43,7 +43,7 @@ const Projects = () => {
     <section className=" my-10 lg:px-[6.5rem]">
       {/* Header Section */}
 
-      {pathname !== "/projects" && (
+      {pathname === "/" && (
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
           <div className="lg:w-1/2 lg:px-0 px-4">
             <h2 className="text-4xl font-semibold uppercase text-primary-80">

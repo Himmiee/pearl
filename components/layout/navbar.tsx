@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp } from "lucide-react";
+import CountryDropdown from "../dropdown/countries";
+// import CountryState from "@/widget/country";
 
 interface NavLink {
   name: string;
@@ -173,6 +175,8 @@ const Navbar = () => {
                 </nav>
               ))}
 
+              {/* <CountryDropdown /> */}
+              {pathname === "/pearl-abroad" && <CountryDropdown />}
               {/* CONTACT BUTTON */}
               <div className="justify-end   hidden lg:w-[30%] xl:flex">
                 <Link href="/contact">
@@ -266,6 +270,7 @@ const Navbar = () => {
                       )}
                     </div>
                   ))}
+                  {pathname === "/pearl-abroad" && <CountryDropdown />}
 
                   {/* CONTACT BUTTON */}
                   <div className="flex justify-center mt-8 absolute bottom-10">
