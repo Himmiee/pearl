@@ -35,7 +35,7 @@ export default function ProjectDetails({
   }, [projects_details.service_tag]);
 
   return (
-    <div className="flex min-h-screen bg-white auto-container lg:space-x-40 space-x-0">
+    <div className="flex min-h-screen bg-white auto-container lg:px-[5rem] lg:space-x-40 space-x-0">
       {/* Sidebar */}
       <nav className="w-64  p-6 lg:space-y-20 space-y-0 lg:flex lg:flex-col hidden ">
         <ul className="space-y-2">

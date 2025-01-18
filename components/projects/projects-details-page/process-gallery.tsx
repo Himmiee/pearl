@@ -127,7 +127,7 @@ const ProcessGallery: React.FC<ProcessGalleryProps> = ({ images }) => {
   };
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-16 lg:px-[7.5rem]">
       {/* Title */}
       <div className="mb-8 ">
         <h2 className="text-4xl font-medium text-primary-80">THE PROCESS</h2>
@@ -168,7 +168,7 @@ const ProcessGallery: React.FC<ProcessGalleryProps> = ({ images }) => {
             onClick={handleCloseModal}
           >
             <motion.div
-              className="relative bg-white rounded-lg shadow-lg overflow-hidden w-[95%] max-w-6xl h-[90vh]"
+              className="relative bg-white rounded-lg shadow-lg overflow-hidden w-[95%] max-w-6xl h-[80vh]"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
