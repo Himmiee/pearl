@@ -102,7 +102,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
             </motion.h1>
             {description && (
               <motion.p
-                className="max-w-xl text-lg lg:text-xl text-white/90"
+                className="max-w-sm text-lg lg:text-xl text-white/90"
                 variants={itemVariants}
               >
                 {description}
