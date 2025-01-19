@@ -12,17 +12,17 @@ export default function Footer() {
     <div className="w-full">
       <Newsletter />
       <footer className="bg-primary-60 w-full mt-20">
-        <div className="lg:px-32 px-1 w-full py-20">
+        <div className="lg:px-[15rem] px-1 w-full py-20">
           {/* Main Footer Content */}
           <div className="flex flex-wrap lg:flex-nowrap w-full gap-y-8">
             {/* Trusted By Section */}
-            <section className="lg:w-[35%] w-full px-4 lg:px-0">
+            <section className="lg:w-[40%] w-full px-4 lg:px-0">
               <h4 className="mb-6 text-xl  font-semibold px-4 ">Trusted By</h4>
               <TrustedLogos />
             </section>
 
             {/* Contact Section */}
-            <section className="lg:w-[30%] w-full text-center lg:text-left">
+            <section className="lg:w-[25%] w-full text-center lg:text-left">
               <h4 className="mb-6 text-xl font-semibold">Contact</h4>
               <div className="space-y-4 flex flex-col justify-center lg:items-start items-center  ">
                 <Link

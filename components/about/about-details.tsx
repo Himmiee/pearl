@@ -35,7 +35,7 @@ export default function AboutDetails() {
   };
 
   return (
-    <div className="flex min-h-screen bg-white auto-container w-full lg:space-x-40 space-x-0 mt-40 mb-10 relative">
+    <div className="flex min-h-screen bg-white px-[6.5rem] w-full lg:space-x-40 space-x-0 mt-40 mb-10 relative">
       {/* this is Sidebar */}
       <nav className="w-64  p-6 lg:space-y-20 space-y-0 lg:flex lg:flex-col hidden text-xl">
         <ul className="space-y-2">
@@ -65,7 +65,7 @@ export default function AboutDetails() {
               ABOUT OUR SERVICES
             </h1> */}
             <h1 className="lg:text-5xl text-4xl font-semibold text-primary-80 mb-8 ">
-              <span className="block absolute left-4 lg:-top-14 -top-5 transform -translate-y-1/2 ">
+              <span className="block absolute left-32 lg:-top-14 -top-5 transform -translate-y-1/2 ">
                 ABOUT OUR SERVICES
               </span>
             </h1>
@@ -90,25 +90,22 @@ export default function AboutDetails() {
               </p>
               <p>
                 Furthermore, we can provide an end-to-end service to our
-
-                customers. At the client&apos;s request, we facilitate and coordinate
-                the design process and deliver the project as a turnkey
-                development. Our project managers work closely with the client
-                throughout a project, starting with the initial consultation
-                process until handover shortly after completion.
-
+                customers. At the client&apos;s request, we facilitate and
+                coordinate the design process and deliver the project as a
+                turnkey development. Our project managers work closely with the
+                client throughout a project, starting with the initial
+                consultation process until handover shortly after completion.
               </p>
               <p>
                 We aim to deliver value for money and are immensely proud of our
                 heritage of exceptional craftsmanship and impeccable project
                 insight provided by our team of professionals. We believe in the
-
-                mantra, &apos;putting the customer first&apos;, and practice this in our
-
-                client engagements. We insist that all our developments and
-                projects are handled with the same level of care and importance
-                that a client will ascribe to the project, prompting our
-                client&apos;s desire to feel the Pearl Projects&apos; touch.
+                mantra, &apos;putting the customer first&apos;, and practice
+                this in our client engagements. We insist that all our
+                developments and projects are handled with the same level of
+                care and importance that a client will ascribe to the project,
+                prompting our client&apos;s desire to feel the Pearl
+                Projects&apos; touch.
               </p>
               <p>
                 Pearl Projects & Developments is active on project sites across

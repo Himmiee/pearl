@@ -30,6 +30,7 @@ import instagramImg from "@/public/icons/instagram.svg";
 import twitterImg from "@/public/icons/twitter.svg";
 import facebookImg from "@/public/icons/facebook.svg";
 import { HeroLayout } from "./HeroLayout";
+import Link from "next/link";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -44,12 +45,16 @@ export const HeroSection: React.FC = () => {
       ]}
       buttons={
         <div className="flex lg:gap-0 gap-1">
-          <button className="bg-primary-100 hover:opacity-90 uppercase transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[160px] lg:w-[363px] h-[59px] text-white tracking-wide font-bold">
-            Request a Quote
-          </button>
-          <button className="bg-transparent border border-white text-white uppercase font-semibold py-2 px-6 hover:bg-white hover:text-black transition w-[160px] lg:w-[363px] h-[59px]">
-            Contact
-          </button>
+          <Link href={"/request-a-quote"}>
+            <button className="bg-primary-100 hover:opacity-90 uppercase transition duration-200 hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[160px] lg:w-[363px] h-[59px] text-white tracking-wide font-bold">
+              Request a Quote
+            </button>
+          </Link>
+          <Link href={"/contact"}>
+            <button className="bg-transparent border border-white text-white uppercase font-semibold py-2 px-6 hover:bg-white hover:text-black transition w-[160px] lg:w-[363px] h-[59px]">
+              Contact
+            </button>
+          </Link>
         </div>
       }
     />

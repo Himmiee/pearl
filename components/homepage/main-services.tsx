@@ -41,12 +41,12 @@ const Services = () => {
 
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-14 lg:px-[6.5rem] ">
         {/* Render skeleton loaders */}
         {[...Array(4)].map((_, index) => (
           <div
             key={index}
-            className="relative h-96 overflow-hidden shadow-lg bg-gray-200/50 rounded-md"
+            className="relative h-96 overflow-hidden shadow-lg bg-gray-200/80 "
           >
             {/* Skeleton for Image */}
             <Skeleton className="absolute inset-0 w-full h-full" />
@@ -67,7 +67,7 @@ const Services = () => {
   console.log(services);
 
   return (
-    <section className=" my-14 ">
+    <section className=" my-14 lg:px-[6.5rem] ">
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
         <div className="lg:w-1/2 lg:px-0 px-4">
@@ -82,7 +82,7 @@ const Services = () => {
         </div>
         <button
           type="button"
-          className="bg-primary-100 lg:-mt-10 mt-7 hover:opacity-90 transform transition duration-200 uppercase hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[300px] h-[59px] text-white -tracking-[3%] font-bold"
+          className="bg-primary-100 lg:-mt-20 mt-7 hover:opacity-90 transform transition duration-200 uppercase hover:shadow-md flex items-center justify-center gap-1.5 font-poppins w-[150px] h-[50px] text-white -tracking-[3%] font-bold"
         >
           Our Offer
         </button>
