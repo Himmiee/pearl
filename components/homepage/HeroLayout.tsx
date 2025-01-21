@@ -56,7 +56,7 @@ export const HeroLayout: React.FC<HeroLayoutProps> = ({
 
         {/* Content Container */}
         <motion.div
-          className="relative h-full flex flex-col lg:flex-row items-center justify-center lg:justify-start text-white lg:space-x-24 lg:w-[60%]"
+          className="relative h-full flex flex-col lg:flex-row items-center justify-center lg:justify-start text-white lg:space-x-24 lg:w-3/4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

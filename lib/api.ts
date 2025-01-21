@@ -25,7 +25,6 @@ export const useUpdateContactForm = () => {
   });
 };
 
-
 export const contactFormSchema = z.object({
   FullName: z
     .string()
@@ -43,8 +42,5 @@ export const contactFormSchema = z.object({
     .string()
     .min(1, "Message is required")
     .max(500, "Message is too long"),
-  From: z.string().optional(), // Optional field
+  From: z.string().optional(),
 });
-
-// Infer the TypeScript type from the Zod schema (optional)
-type ContactFormSchema = z.infer<typeof contactFormSchema>;

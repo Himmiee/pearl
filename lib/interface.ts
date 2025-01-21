@@ -28,4 +28,5 @@ export interface IContactForm {
   Message: string;
   Asset?: string;
   From: string;
+  agreeToTerms:string;
 }

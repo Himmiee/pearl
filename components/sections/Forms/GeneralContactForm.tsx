@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { CustomInput } from "../../custom/Inputs/CustomInputs";
 import { FormTextArea } from "@/components/custom/Inputs/CustomTextarea";
 import { IContactForm } from "@/lib/interface";
-import { contactFormSchema } from "@/lib/api";
+import { contactFormSchema, useUpdateContactForm } from "@/lib/api";
 import { zodResolver } from "@hookform/resolvers/zod";
-// import { Loader } from "lucide-react";
+import { Loader } from "lucide-react";
 
 export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
   const methods = useForm<IContactForm>({
@@ -23,7 +23,7 @@ export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
   });
 
   const { handleSubmit } = methods;
-  // const { mutate, isPending } = useUpdateContactForm();
+  const { mutate, isPending } = useUpdateContactForm();
 
   const onSubmit = (data: IContactForm) => {
     console.log("Form Submitted:", data);
@@ -79,11 +79,7 @@ export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
               type="submit"
               className="w-full bg-[#2B2F84] h-[58px]  hover:bg-[#2B2F84]/90 text-white "
             >
-              {/* {isPending ? (
-                <Loader className="text-lg animate-spin" />
-              ) : ( */}
-                Submit
-              {/* )} */}
+              {isPending ? <Loader className="text-lg animate-spin" /> : "Submit"}
             </Button>
           </div>
         </form>

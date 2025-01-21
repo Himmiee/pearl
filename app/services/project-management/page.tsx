@@ -14,18 +14,18 @@ const ProjectManagementPage: React.FC = () => {
   return (
     <section className="space-y-8 md:space-y-24 ">
       <ProjectManangementHeroSection />
-      <section className=" space-y-8 md:space-y-24   ">
-        <section className="space-y-8 md:space-y-24 p-4 lg:auto-container">
+      <section className=" space-y-8 md:space-y-24 ">
+        <section className="space-y-8 md:space-y-24 p-4 lg:auto-container lg:px-[6rem] lg:auto-container ">
           <PMDetailSection />
           <PMTimeLineSection />
           <PMReverseDetailSection />
         </section>
-        <section className="w-full">
+        <section className="lg:px-[6rem] lg:auto-container ">
           <AchievementLayout />
           <AchievementBottomLayout />
         </section>
       </section>
-      <ContactFormLayout formTitle="Project Management"/>
+      <ContactFormLayout formTitle="Project Management" />
     </section>
   );
 };
