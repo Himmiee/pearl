@@ -32,7 +32,7 @@ export const GeneralContactForm = ({ formTitle }: { formTitle: string }) => {
 
   return (
     <FormProvider {...methods}>
-      <section className="space-y-6">
+      <section className="space-y-6 w-full">
         <div className="text-[#303030] font-medium text-[22px] lg:text-[24px] ">
           Are you interested in a similar service? <br /> Contact us via this
           form.
