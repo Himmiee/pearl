@@ -3,7 +3,9 @@ import { Barlow } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
-import ReactQueryProvider from "@/lib/QueryProvider";
+import Providers from "@/providers";
+import { Toaster } from "react-hot-toast";
+
 
 const barlow = Barlow({
   subsets: ["latin"], // Choose the appropriate subsets, e.g., "latin"
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
   description: "Official Website of Pearl Projects",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,13 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactQueryProvider>
-        <body className={barlow.className}>
+      <body className={barlow.className}>
+        <Providers>
           <Navbar />
           {children}
           <Footer />
-        </body>
-      </ReactQueryProvider>
+          <Toaster />
+        </Providers>
+      </body>
     </html>
   );
 }

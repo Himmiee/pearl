@@ -1,0 +1,133 @@
+import axios from 'axios';
+
+export const Axiosinstance = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+});
+
+export const Countries = [
+  "Nigeria",
+  "Ghana",
+  "South Africa",
+  "Kenya",
+  "Togo",
+  "Benin",
+  "Tanzania",
+  "Uganda",
+  "Rwanda",
+  "Zambia",
+  "Zimbabwe",
+  "Morocco",
+  "Algeria",
+  "Tunisia",
+  "Egypt",
+  "Mauritius",
+  "Seychelles",
+  "Mozambique",
+  "Angola",
+  "Namibia",
+  "Botswana",
+  "Lesotho",
+  "Swaziland",
+  "Malawi",
+  "Cameroon",
+  "Niger",
+  "Burkina Faso",
+  "Mali",
+  "Senegal",
+  "Guinea",
+  "Ivory Coast",
+  "Liberia",
+  "Sierra Leone",
+  "Gambia",
+  "Guinea-Bissau",
+  "Cape Verde",
+  "Equatorial Guinea",
+  "Gabon",
+  "Congo",
+  "DRC",
+  "Chad",
+  "Central African Republic",
+  "Sudan",
+  "South Sudan",
+  "Ethiopia",
+  "Eritrea",
+  "Djibouti",
+  "Somalia",
+  "UAE",
+  "Saudi Arabia",
+  "Qatar",
+  "Kuwait",
+  "Bahrain",
+  "Oman",
+  "Jordan",
+  "Lebanon",
+  "Syria",
+  "Iraq",
+  "Iran",
+  "Yemen",
+  "Afghanistan",
+  "Pakistan",
+  "India",
+  "Bangladesh",
+  "Sri Lanka",
+  "Nepal",
+  "Bhutan",
+  "Maldives",
+  "Thailand",
+  "Cambodia",
+  "Vietnam",
+  "Laos",
+  "Myanmar",
+];
+
+export const ProjectType = [
+  "Construction",
+  "Renovation",
+  "Interior Design",
+  "Exterior Design",
+];
+
+export const Testimonials = [
+  {
+    id: 1,
+    clientName: "Mr Maya",
+    projectType: "Bar Refurbishment",
+    details:
+      "Pearl Projects transformed our bar into a modern and inviting space. The attention to detail and timely delivery exceeded our expectations.",
+  },
+  {
+    id: 2,
+    clientName: "Mrs Leila Gab",
+    projectType: "House Refurbishment",
+    details:
+      "We had our kitchen extension, bathroom, and living room restoration done. It has been a pleasure having Pearl Projects refurbish our home. Their team not only delivered a beautiful new home within the time agreed but also helped us make better decisions with our improvement and kept costs within budget. This was done without sacrificing quality.",
+  },
+  {
+    id: 3,
+    clientName: "Mr A Lana",
+    projectType: "Renovation of Bathrooms and Decoration",
+    details:
+      "From start to finish, the team was professional and thorough. They provided great ideas for bathroom decoration, making the space more functional and stylish.",
+  },
+  {
+    id: 4,
+    clientName: "Mr Leonardo Facci",
+    projectType: "Bathroom Extension",
+    details:
+      "The bathroom extension exceeded our expectations. Pearl Projects designed and built a space that blends seamlessly with the rest of the house.",
+  },
+  {
+    id: 5,
+    clientName: "Ms Clara Johnson",
+    projectType: "Living Room Redesign",
+    details:
+      "Our living room redesign is now the highlight of our home! The Pearl Projects team introduced modern touches while keeping a cozy vibe intact.",
+  },
+  {
+    id: 6,
+    clientName: "Mr James Carter",
+    projectType: "Kitchen Remodeling",
+    details:
+      "The kitchen remodel has made cooking a joy! Pearl Projects delivered a sleek and functional design that matches our family’s needs perfectly.",
+  },
+];

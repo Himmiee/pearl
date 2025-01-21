@@ -10,11 +10,11 @@ const GridSection: React.FC = () => {
     <section className="w-full min-h-screen py-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-6 sm:grid-rows-3 lg:grid-rows-2 h-auto">
         {/* Top-Left: Logo Section */}
-        <div className="bg-blue-900 flex flex-col items-center justify-center text-white h-48 lg:h-auto">
+        <div className="bg-[#2B2F84] flex flex-col items-center justify-center text-white h-48 lg:h-auto">
           <Image
             src={logoImg}
             alt="Logo"
-            className="lg:w-32 lg:h-32 w-24 h-24"
+            className="lg:w-40 lg:h-40 w-28 h-28"
           />
         </div>
 
@@ -55,12 +55,12 @@ const GridSection: React.FC = () => {
         </div>
 
         {/* Bottom-Right: "20 Years in Action" */}
-        <div className="bg-gradient-to-r from-blue-700 to-blue-900 flex items-center justify-center h-48 lg:h-auto">
-          <div className="text-center">
-            <h2 className="text-white text-2xl lg:text-5xl font-bold">
+        <div className="bg-[#2B2F84] flex items-center justify-center h-48 lg:h-auto">
+          <div className="text-center space-y-5">
+            <h2 className="text-white text-3xl lg:text-5xl font-bold">
               20 YEARS
             </h2>
-            <p className="text-white text-sm lg:text-2xl mt-2">IN ACTION</p>
+            <p className="text-white text-3xl lg:text-6xl mt-2">IN ACTION</p>
           </div>
         </div>
       </div>

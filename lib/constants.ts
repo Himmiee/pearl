@@ -35,7 +35,7 @@ export const SERVICES_LEFT = [
   export const CONTACT_INFO = {
     email: 'info@pearl-projects.com',
     phones: [
-      '+44 (0) 1078 350 00705',
+      '+44 (0) 078 350 00705',
       '+234 (0) 080 235 178605'
     ]
   } as const
